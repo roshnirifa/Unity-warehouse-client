@@ -1,0 +1,10 @@
+.navbar {
+    background-color: #B0B9F7;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav a {
+    text-decoration: none;
+    margin-right: 20px;
+    color: black;
+}

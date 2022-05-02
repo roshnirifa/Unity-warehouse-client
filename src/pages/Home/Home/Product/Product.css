@@ -1,0 +1,25 @@
+.product {
+    border: 1px solid lightslategray;
+    border-radius: 10px;
+    padding-bottom: 30px;
+    text-align: center;
+    width: 90%;
+    margin-top: 20px;
+    box-shadow: 10px 10px 5px lightblue;
+
+}
+
+.product-img {
+    overflow: hidden;
+}
+
+.product-img img {
+    transition: all 1.5s ease;
+    height: 300px;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+.product-img:hover img {
+    transform: scale(1.5);
+}
