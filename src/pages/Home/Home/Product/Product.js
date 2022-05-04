@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button, Card, Col, Row } from 'react-bootstrap';
 import './Product.css'
 
 const Product = ({ product }) => {
@@ -7,7 +6,7 @@ const Product = ({ product }) => {
     return (
         <div>
 
-            <div className='product container'>
+            <div className='product container '>
                 <div className='product-img'>
                     <img src={img} alt="" />
                 </div>

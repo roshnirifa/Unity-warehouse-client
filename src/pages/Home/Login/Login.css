@@ -1,0 +1,10 @@
+.login {
+    background-color: #5e6161;
+}
+
+.login-container {
+    border: 2px solid gray;
+    width: 450px;
+    height: 500px;
+    background-color: white;
+}

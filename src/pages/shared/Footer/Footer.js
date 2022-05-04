@@ -8,7 +8,10 @@ const Footer = () => {
         <footer className='footer'>
             <div class="d-flex justify-content-around align-items-center">
 
-                <p>Copyright © 2021 Colthes warehouse</p>
+                <div>
+                    <p>Developed by Roshni Rifa</p>
+                    <p ><small>copyright @{(new Date().getFullYear())} </small></p>
+                </div>
 
 
                 <div className='icon'>

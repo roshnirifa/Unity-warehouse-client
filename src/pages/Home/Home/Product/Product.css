@@ -3,9 +3,9 @@
     border-radius: 10px;
     padding-bottom: 30px;
     text-align: center;
-    width: 90%;
+    width: 100%;
     margin-top: 20px;
-    box-shadow: 10px 10px 5px lightblue;
+    box-shadow: 5px 5px 5px lightblue;
 
 }
 
@@ -15,7 +15,7 @@
 
 .product-img img {
     transition: all 1.5s ease;
-    height: 300px;
+    height: 200px;
     margin-top: 10px;
     border-radius: 20px;
 }
