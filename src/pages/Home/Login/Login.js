@@ -1,8 +1,11 @@
 import React, { useRef, useState } from 'react';
 import { Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../firebase_init';
+import Loading from '../../shared/Loading/Loading';
+import SocialLogin from '../../SocialLogin/SocialLogin';
 import './Login.css'
 
 
@@ -11,6 +14,9 @@ const Login = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
+    const location = useLocation();
+
+
     const [
         signInWithEmailAndPassword,
         user,
@@ -18,14 +24,18 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+    let from = location.state?.from?.pathname || "/";
+
     const handleEmailBlur = event => {
         setEmail(event.target.value);
     }
     const handlepassBlur = event => {
         setPass(event.target.value);
     }
+
     if (user) {
-        navigate('/home')
+        navigate(from, { replace: true });
     }
 
     const handleSubmit = e => {
@@ -35,9 +45,23 @@ const Login = () => {
 
     }
 
+
     const navigateSignUp = () => {
         navigate('/register');
     }
+
+    const resetPassword = async () => {
+
+        if (email) {
+            await sendPasswordResetEmail(email);
+            alert('Sent email');
+        }
+
+    }
+    if (loading) {
+        return <Loading></Loading>
+    }
+
     return (
         <div className='login p-5'>
             <div className='mx-auto login-container '>
@@ -63,7 +87,10 @@ const Login = () => {
                     <p className='mt-4  fw-bold'>New to Clothes Werehouse? <span className='text-primary ' onClick={navigateSignUp} style={{ cursor: 'pointer' }}>Please Register</span></p>
 
 
-                    <p className='mt-4  fw-bold'>Forget Password? <span className='text-primary' style={{ cursor: 'pointer' }}>Reset Password</span></p>
+                    <p className='mt-4  fw-bold'>Forget Password? <span className='text-primary' onClick={resetPassword} style={{ cursor: 'pointer' }}>Reset Password</span></p>
+
+                    <SocialLogin></SocialLogin>
+                    <ToastContainer />
                 </Form>
             </div>
         </div>

@@ -6,7 +6,7 @@ import './Inventory.css'
 const Inventory = () => {
     const [products] = useProduct();
     return (
-        <div className=' w-75 mx-auto'>
+        <div className=' container'>
             <h1 className='text-center' >Inventory</h1>
             <div className='products-container'>
                 {

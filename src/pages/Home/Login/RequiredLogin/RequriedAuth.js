@@ -1,10 +1,10 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Navigate, useLocation } from 'react-router-dom';
-import auth from '../../../firebase_init_js';
-import Loading from '../../../shared/Footer/Loading/Loading';
+import auth from '../../../firebase_init';
+import Loading from '../../../shared/Loading/Loading';
 
-const RequireAuth = ({ children }) => {
+const RequriedAuth = ({ children }) => {
     const [user, loading] = useAuthState(auth);
     const location = useLocation();
     if (loading) {
@@ -18,4 +18,4 @@ const RequireAuth = ({ children }) => {
     return children;
 };
 
-export default RequireAuth;
+export default RequriedAuth;

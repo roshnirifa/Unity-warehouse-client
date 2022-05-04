@@ -2,7 +2,9 @@ import React, { useRef, useState } from 'react';
 import { Button, Form } from "react-bootstrap";
 import { useNavigate } from 'react-router-dom';
 import auth from '../firebase_init.js';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
+import SocialLogin from '../SocialLogin/SocialLogin.js';
+import Loading from '../shared/Loading/Loading.js';
 ;
 
 
@@ -17,7 +19,8 @@ const Register = () => {
     const [
         createUserWithEmailAndPassword,
         user,
-        loading,] = useCreateUserWithEmailAndPassword(auth);
+        loading,] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
     const handleNameBlur = event => {
         setName(event.target.value);
@@ -33,7 +36,7 @@ const Register = () => {
         setConfirmPass(event.target.value);
     }
     if (user) {
-        navigate('/home')
+        console.log("user", user);
     }
 
 
@@ -50,12 +53,18 @@ const Register = () => {
             setError("password should be 6 character long");
             return;
         }
-        createUserWithEmailAndPassword(email, pass, confirmPass)
+        await createUserWithEmailAndPassword(email, pass, confirmPass);
+        await updateProfile({ displayName: name });
+        alert('Updated profile');
+        navigate('/home')
 
     }
     const navigateSignUp = () => {
         navigate('/login');
 
+    }
+    if (loading) {
+        return <Loading></Loading>
     }
 
     return (
@@ -83,7 +92,10 @@ const Register = () => {
                         <button className='btn btn-primary w-100'>Register</button>
                     </div>
 
+
                     <p className='mt-4 text-danger fw-bold' >Already have an account? <span className='text-primary' onClick={navigateSignUp} style={{ cursor: 'pointer' }}>Please Login</span></p>
+
+                    <SocialLogin></SocialLogin>
 
 
                 </Form>

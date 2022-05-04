@@ -9,6 +9,12 @@ import Login from './pages/Home/Login/Login';
 import Footer from './pages/shared/Footer/Footer'
 import Register from './pages/Register/Register';
 import { ToastContainer } from 'react-bootstrap';
+import ProductsDetail from './pages/Products/ProductsDetail';
+
+import NotFound from './pages/NotFound/NotFound';
+import RequriedAuth from './pages/Home/Login/RequiredLogin/RequriedAuth';
+
+
 
 
 function App() {
@@ -18,9 +24,16 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
+
+        <Route path='/products/:productsId' element={
+          <RequriedAuth>
+            <ProductsDetail></ProductsDetail>
+          </RequriedAuth>
+        }></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
       <ToastContainer></ToastContainer>
