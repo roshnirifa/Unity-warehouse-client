@@ -1,16 +1,37 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Form } from 'react-bootstrap';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
+import auth from '../../firebase_init';
 import './Login.css'
 
 
 const Login = () => {
-    const emailRef = useRef('');
-    const passRef = useRef('');
+
     const navigate = useNavigate();
+    const [email, setEmail] = useState('');
+    const [pass, setPass] = useState('');
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
+
+    const handleEmailBlur = event => {
+        setEmail(event.target.value);
+    }
+    const handlepassBlur = event => {
+        setPass(event.target.value);
+    }
+    if (user) {
+        navigate('/home')
+    }
 
     const handleSubmit = e => {
         e.preventDefault();
+
+        signInWithEmailAndPassword(email, pass)
 
     }
 
@@ -25,12 +46,16 @@ const Login = () => {
                 </div>
                 <Form onSubmit={handleSubmit} className='m-5'>
                     <Form.Group className="mb-3">
-                        <Form.Control type="email" placeholder="Enter email" ref={emailRef} required />
+                        <Form.Control onBlur={handleEmailBlur} type="email" placeholder="Enter email" required />
                     </Form.Group>
 
                     <Form.Group className="mb-3">
-                        <Form.Control type="password" placeholder="Password" ref={passRef} required />
+                        <Form.Control onBlur={handlepassBlur} type="password" placeholder="Password" required />
                     </Form.Group>
+                    <p className='text-danger'>{error?.message}</p>
+                    {
+                        loading && <p>Loading...</p>
+                    }
 
                     <div className='text-center'>
                         <button className='btn btn-primary w-100'>Login</button>
