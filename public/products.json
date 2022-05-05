@@ -4,107 +4,107 @@
         "name": "short frok",
         "price": "1500",
         "quantity": "10",
-        "suplier": "Rifa",
-        "description": "Test preparation is an educational course, or a learning tool designed to increase students' performance on standardized tests.  ",
+        "suplier": "Red Origin",
+        "description": "premium silk dress  ",
         "img": "https://i.etsystatic.com/26737480/r/il/d946a2/3208164100/il_340x270.3208164100_qztf.jpg"
     },
     {
         "id": 2,
-        "name": "short frok",
-        "price": "2000",
-        "quantity": "10",
-        "suplier": "Rifa",
-        "description": "Group lessons are designed with consideration of support and encouragement.The groups are always fun, amazing, positive and enjoyable. ",
-        "img": "https://i.etsystatic.com/26737480/r/il/d946a2/3208164100/il_340x270.3208164100_qztf.jpg"
+        "name": "denim jaket",
+        "price": "7000",
+        "quantity": "5",
+        "suplier": "Artisan",
+        "description": "premium quality denim jaket for girls",
+        "img": "https://i.pinimg.com/originals/69/a6/74/69a6748f03f10a43fb47bcfaefc6a197.jpg"
     },
     {
         "id": 3,
-        "name": "short frok",
-        "price": "3000",
+        "name": "denim jaket",
+        "price": "7000",
         "quantity": "10",
-        "suplier": "Rifa",
-        "description": "If your child tends to learn at a slower pace or requires after-school tutoring, private lessons may likely be the best choice for them.",
-        "img": "https://i.etsystatic.com/26737480/r/il/d946a2/3208164100/il_340x270.3208164100_qztf.jpg"
+        "suplier": "Yellow",
+        "description": "premium quality denim jaket for girls",
+        "img": "https://cdn.shopclues.com/images1/thumbnails/108673/640/1/150396663-108673558-1595754876.jpg"
     },
     {
         "id": 4,
         "name": "short frok",
         "price": "5000",
         "quantity": "10",
-        "suplier": "Rifa",
-        "description": "This extra special session for those special kind of children whom are slighty weak in catch math",
-        "img": "https://i.etsystatic.com/26737480/r/il/d946a2/3208164100/il_340x270.3208164100_qztf.jpg"
+        "suplier": "Vigor",
+        "description": "cotton dress",
+        "img": "https://cdn.shopify.com/s/files/1/0266/6276/4597/products/300892483SAGE_2_1024x1024.jpg?v=1647033309"
     },
     {
         "id": 5,
-        "name": "short frok",
-        "price": "7000",
+        "name": "Unicorn T-shirt",
+        "price": "1500",
         "quantity": "10",
-        "suplier": "Rifa",
-        "description": "I also provide the home tuiton service. If You want a private tutor dont be hegitate to knock me. ",
-        "img": "https://i.etsystatic.com/26737480/r/il/d946a2/3208164100/il_340x270.3208164100_qztf.jpg"
+        "suplier": "Vigor",
+        "description": "luxaries unicorn cottn t shirt ",
+        "img": "https://images-eu.ssl-images-amazon.com/images/I/515WK8bKtFL._AC._SR360,460.jpg"
     },
     {
         "id": 6,
-        "name": "short frok",
+        "name": "baby dress",
         "price": "7000",
         "quantity": "10",
-        "suplier": "Rifa",
-        "description": "I also provide the home tuiton service. If You want a private tutor dont be hegitate to knock me. ",
-        "img": "https://i.etsystatic.com/26737480/r/il/d946a2/3208164100/il_340x270.3208164100_qztf.jpg"
+        "suplier": "baby zone",
+        "description": "5-10yeras babies cotton dress ",
+        "img": "https://www.saffron.com.bd/images/detailed/207/70_q515-m0.jpg"
     },
     {
         "id": 7,
-        "name": "short frok",
-        "price": "7000",
-        "quantity": "10",
-        "suplier": "Rifa",
-        "description": "I also provide the home tuiton service. If You want a private tutor dont be hegitate to knock me. ",
-        "img": "https://i.etsystatic.com/26737480/r/il/d946a2/3208164100/il_340x270.3208164100_qztf.jpg"
+        "name": "Red T-shirt",
+        "price": "2000",
+        "quantity": "12",
+        "suplier": "Red Origin",
+        "description": "cotton t shirt ",
+        "img": "https://www.beyoung.in/api/cache/catalog/p/o/pocket_fries_red_women_model_15-2-2021_400x400.jpg"
     },
     {
         "id": 8,
-        "name": "short frok",
-        "price": "7000",
+        "name": "sun flower doted ",
+        "price": "3000",
         "quantity": "10",
-        "suplier": "Rifa",
-        "description": "I also provide the home tuiton service. If You want a private tutor dont be hegitate to knock me. ",
-        "img": "https://i.etsystatic.com/26737480/r/il/d946a2/3208164100/il_340x270.3208164100_qztf.jpg"
+        "suplier": "Artisan",
+        "description": "cotton tarvel comfortable dress",
+        "img": "https://media.kohlsimg.com/is/image/kohls/2801139?wid=600&hei=600&op_sharpen=1"
     },
     {
         "id": 9,
-        "name": "short frok",
-        "price": "7000",
+        "name": "Cotton shits",
+        "price": "2000",
         "quantity": "10",
-        "suplier": "Rifa",
-        "description": "I also provide the home tuiton service. If You want a private tutor dont be hegitate to knock me. ",
-        "img": "https://i.etsystatic.com/26737480/r/il/d946a2/3208164100/il_340x270.3208164100_qztf.jpg"
+        "suplier": "Artisan",
+        "description": "tarvels t shirts ",
+        "img": "https://5.imimg.com/data5/YU/MT/NS/SELLER-3664875/mens-shirts-500x500.jpg"
     },
     {
         "id": 10,
-        "name": "short frok",
+        "name": "Cotton shirts",
         "price": "7000",
         "quantity": "10",
-        "suplier": "Rifa",
-        "description": "I also provide the home tuiton service. If You want a private tutor dont be hegitate to knock me. ",
-        "img": "https://i.etsystatic.com/26737480/r/il/d946a2/3208164100/il_340x270.3208164100_qztf.jpg"
+        "suplier": "Artisan",
+        "description": "lluxaries cotton t shirts",
+        "img": "https://img2.exportersindia.com/product_images/bc-full/dir_136/4052884/premium-mens-shirts-2378877.jpeg"
     },
     {
         "id": 11,
-        "name": "short frok",
+        "name": "Denim jaket",
         "price": "7000",
         "quantity": "10",
-        "suplier": "Rifa",
-        "description": "I also provide the home tuiton service. If You want a private tutor dont be hegitate to knock me. ",
-        "img": "https://i.etsystatic.com/26737480/r/il/d946a2/3208164100/il_340x270.3208164100_qztf.jpg"
+        "suplier": "vigor",
+        "description": "denim jaket for mens ",
+        "img": "https://www.dhresource.com/0x0/f2/albu/g20/M01/A8/83/rBVaqGDWo-iAQ_WAAAFK3cgyrBM212.jpg/e-baihui-men-denim-jacket-streetwear-hip.jpg"
     },
     {
         "id": 12,
         "name": "short frok",
         "price": "7000",
         "quantity": "10",
-        "suplier": "Rifa",
-        "description": "I also provide the home tuiton service. If You want a private tutor dont be hegitate to knock me. ",
+        "suplier": "Artisan",
+        "description": " premium silk dress ",
         "img": "https://i.etsystatic.com/26737480/r/il/d946a2/3208164100/il_340x270.3208164100_qztf.jpg"
     }
 ]

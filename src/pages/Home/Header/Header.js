@@ -8,6 +8,7 @@ import './Header.css'
 
 const Header = () => {
     const [user] = useAuthState(auth);
+    console.log(user);
     const handleSignOut = () => {
         signOut(auth)
     }
@@ -23,11 +24,11 @@ const Header = () => {
                         <Link to='/blogs'>Blog</Link>
 
                         {
-                            user ? <Link onClick={handleSignOut} as={Link} to="/checkout" >Signout</Link>
+                            user ? <Link onClick={handleSignOut} as={Link} to="/products" >Signout</Link>
                                 :
                                 <Link to='/login'>Login</Link>
                         }
-                        <p> {user && user.email}</p>
+                        <p> {user && user.displayName}</p>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

@@ -2,7 +2,8 @@ import React, { useRef, useState } from 'react';
 import { Form } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { toast, ToastContainer } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../firebase_init';
 import Loading from '../../shared/Loading/Loading';
 import SocialLogin from '../../SocialLogin/SocialLogin';
@@ -50,12 +51,17 @@ const Login = () => {
         navigate('/register');
     }
 
+
     const resetPassword = async () => {
 
         if (email) {
             await sendPasswordResetEmail(email);
-            alert('Sent email');
+            toast('Sent email');
         }
+        else {
+            toast('please enter your email address');
+        }
+
 
     }
     if (loading) {
@@ -70,7 +76,7 @@ const Login = () => {
                 </div>
                 <Form onSubmit={handleSubmit} className='m-5'>
                     <Form.Group className="mb-3">
-                        <Form.Control onBlur={handleEmailBlur} type="email" placeholder="Enter email" required />
+                        <Form.Control onBlur={handleEmailBlur} type="email" name="email" placeholder="Enter email" required />
                     </Form.Group>
 
                     <Form.Group className="mb-3">
