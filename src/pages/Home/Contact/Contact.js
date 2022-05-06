@@ -12,17 +12,27 @@ const Contact = () => {
                     <img src={img} alt="" />
                 </div>
                 <div className='form' >
-                    <Form className='form-gorup'>
-                        <label htmlFor="">Name:</label> <br />
-                        <input type="text" placeholder='name' /> <br />
-                        <label htmlFor="">Email:</label> <br />
-                        <input type="email" placeholder='email' /> <br />
-                        <label htmlFor="">Phone:</label> <br />
-                        <input type="number" placeholder='Phone Number' /> <br />
-                        <label htmlFor="">Description:</label> <br />
-                        <input type="textarea" style={{ height: "100px" }} />
+                    <Form className='w-75 mx-auto mt-4'>
+                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                            <Form.Label>Name</Form.Label>
+                            <Form.Control type="text" placeholder="name" />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                            <Form.Label>Email address</Form.Label>
+                            <Form.Control type="email" placeholder="name@example.com" />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                            <Form.Label>Phone Number</Form.Label>
+                            <Form.Control type="number" placeholder="number" />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                            <Form.Label>Description</Form.Label>
+                            <Form.Control as="textarea" rows={3} />
+                        </Form.Group>
+                        <div className='text-center'>
+                            <input type="button" className='btn btn-primary w-75 ' value="submit" />
+                        </div>
                     </Form>
-
                 </div>
             </div>
 

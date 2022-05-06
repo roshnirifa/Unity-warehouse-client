@@ -1,16 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Product.css'
 
-const Product = ({ product }) => {
+const AllProducts = ({ product }) => {
     const { id, name, img, price, description, quantity, suplier } = product;
     const navigate = useNavigate()
     const handleUpdate = (id) => {
         navigate(`/manageItmes/${id}`)
     }
     return (
-
-
         <div className='product'>
             <div className='product-img'>
                 <img src={img} alt="" />
@@ -27,4 +24,4 @@ const Product = ({ product }) => {
     );
 };
 
-export default Product;
+export default AllProducts;

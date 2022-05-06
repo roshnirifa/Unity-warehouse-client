@@ -1,12 +1,11 @@
 .img img {
     width: 450px;
-    height: 450px;
+    height: 483px;
 }
 
 .form {
     box-shadow: 1px 1px 5px 5px lightblue;
-    padding-left: 70px;
-    border-radius: 10px;
+
     width: 450px
 }
 
