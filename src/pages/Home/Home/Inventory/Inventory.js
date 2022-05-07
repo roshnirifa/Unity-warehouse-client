@@ -4,14 +4,14 @@ import Product from '../Product/Product';
 import './Inventory.css'
 
 const Inventory = () => {
-    const [products] = useProduct();
+    const { products } = useProduct();
     return (
         <div className=' container'>
             <h1 className='text-center' >Inventory</h1>
             <div className='products-container'>
                 {
                     products.slice(0, 6).map(product => <Product
-                        key={product.id}
+                        key={product._id}
                         product={product}
                     ></Product>)
                 }

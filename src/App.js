@@ -28,9 +28,9 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
 
-        <Route path='/manageItmes/:manageItmesId' element={
+        <Route path='/inventory/:inventoryId' element={
           <RequriedAuth>
-            <ManageItems></ManageItems>
+            <ProductsDetail></ProductsDetail>
           </RequriedAuth>
         }></Route>
         <Route path='/products' element={
@@ -40,7 +40,11 @@ function App() {
         }></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/addItems' element={<AddItems></AddItems>}></Route>
-        <Route path='/manageItems' element={<ManageItems></ManageItems>}></Route>
+        <Route path='/manageItems' element={
+
+          <ManageItems></ManageItems>
+
+        }></Route>
         <Route path='/myItems' element={<MyItems></MyItems>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>

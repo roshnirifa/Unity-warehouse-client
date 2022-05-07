@@ -8,7 +8,6 @@ import './Header.css'
 
 const Header = () => {
     const [user] = useAuthState(auth);
-    console.log(user);
     const handleSignOut = () => {
         signOut(auth)
     }
@@ -21,9 +20,11 @@ const Header = () => {
                     <Nav className='ms-auto'>
                         <Link to='/home'>Home</Link>
                         <Link to='/products'>Products</Link>
+
                         {
                             user && <Link to='/manageItems'>Manage Items</Link>
                         }
+
 
                         {
                             user && <Link to='/addItems'>Add Items</Link>

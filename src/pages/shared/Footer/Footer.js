@@ -9,7 +9,7 @@ const Footer = () => {
             <div class="d-flex justify-content-around align-items-center">
 
                 <div>
-                    <p>Developed by Roshni Rifa</p>
+
                     <p ><small>copyright @{(new Date().getFullYear())} </small></p>
                 </div>
 

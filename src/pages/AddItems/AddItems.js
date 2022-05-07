@@ -13,6 +13,8 @@ const AddItems = () => {
         const imgUrl = e.target.imgUrl.value;
         const description = e.target.description.value;
         console.log(productName, supplierName, price, email, imgUrl, description);
+
+
         const url = 'http://localhost:5000/addItems';
 
         fetch(url, {
@@ -27,7 +29,10 @@ const AddItems = () => {
             .then((response) => response.json())
             .then((data) => {
                 console.log(data);
+                alert('product added succsfully')
                 e.target.reset();
+
+
             });
 
     }

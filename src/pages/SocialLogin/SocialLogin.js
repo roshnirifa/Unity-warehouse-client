@@ -3,6 +3,7 @@ import { useSignInWithFacebook, useSignInWithGoogle } from 'react-firebase-hooks
 import { BsFacebook, BsGoogle } from "react-icons/bs";
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../firebase_init';
+import Loading from '../shared/Loading/Loading';
 
 import './SocialLogin.css'
 
@@ -20,7 +21,7 @@ const SocialLogin = () => {
         );
     }
     if (loading) {
-        return <p>Loading...</p>;
+        <Loading></Loading>
     }
     if (user) {
         navigate(from, { replace: true });

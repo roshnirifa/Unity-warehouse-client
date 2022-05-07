@@ -1,0 +1,7 @@
+.table {
+    border: 1px solid gray;
+}
+
+.table-head {
+    background-color: rgb(200, 243, 243);
+}
