@@ -8,12 +8,20 @@ import './ManageItems.css'
 
 
 const ManageItems = () => {
+    const { products, setRender, setProducts } = useProduct();
+
+
     const [restock, setRestock] = useState(null);
     const handleRestock = id => {
         axios.put(`http://localhost:5000/restockQuantity/${id}`, { quantity: restock })
             .then(data => {
                 alert("data updated")
+                setRender(true)
 
+            })
+
+            .catch(error => {
+                setRender(false)
             })
 
     }
@@ -27,25 +35,32 @@ const ManageItems = () => {
     const handleDelivered = id => {
         axios.put(`http://localhost:5000/delivered/${id}`)
             .then(data => {
-                console.log(data.data);
+                alert("product delivered")
+                setRender(true)
+
             })
+            .catch(error => {
+                setRender(false)
+            })
+
+
     }
 
 
-    const { products, setRender } = useProduct();
+
     const navigate = useNavigate()
     const handleAddNewItem = () => {
         navigate('/addItems')
     }
     return (
         <div className='container'>
-            <h1 className='text-center mt-5'>Manage Inventory</h1>
+            <h1 className='text-center mt-5 pt-5'>Manage Inventory</h1>
 
             <div className='text-center'>
                 <button onClick={handleAddNewItem} className='btn btn-outline-danger mb-5 mt-2'> Add New Item</button>
             </div>
             <div className='table'>
-                <Table striped bordered hover>
+                <Table striped bordered hover responsive>
                     <thead className=' table-head'>
                         <tr>
                             <th>Product Name</th>

@@ -12,9 +12,9 @@ const Header = () => {
         signOut(auth)
     }
     return (
-        <Navbar collapseOnSelect expand="lg" className='navbar' >
+        <Navbar collapseOnSelect expand="lg" className='navbar fixed-top' >
             <Container>
-                <Navbar.Brand href="/home" className='fs-4'>Clothes <span style={{ color: '#FE4619' }} >Warehouse</span> </Navbar.Brand>
+                <Navbar.Brand href="/home" className='fs-4'>Unity <span style={{ color: '#FE4619' }} >Warehouse</span> </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className='ms-auto'>
@@ -33,7 +33,9 @@ const Header = () => {
                         {
                             user && <Link to='/myItems'>My Items</Link>
                         }
-                        <Link to='/blogs'>Blog</Link>
+
+                        <Link to='/contact'>Contact</Link>
+                        <Link to='/blog'>Blog</Link>
                         {
                             user ? <Link onClick={handleSignOut} as={Link} to="/products" >Signout</Link>
                                 :

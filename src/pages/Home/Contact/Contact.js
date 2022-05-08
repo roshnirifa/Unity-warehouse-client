@@ -6,7 +6,13 @@ import { Form } from 'react-bootstrap';
 const Contact = () => {
     return (
         <div className='container mb-5 w-75'>
-            <h1 className='text-center  my-5' >Get In Touch</h1>
+
+            <h1 className='text-center  my-5 text-primary' >Get In Touch</h1>
+            <div className='text-center'>
+                <h4>Unity  <span style={{ color: '#FE4619' }} >Warehouse</span></h4>
+                <p>sector# 10, Uttara Dhaka 1230</p>
+                <p>Phone: 01999999988</p>
+            </div>
             <div className='d-flex justify-content-evenly contact-container'>
                 <div className='img'  >
                     <img src={img} alt="" />
@@ -34,7 +40,9 @@ const Contact = () => {
                         </div>
                     </Form>
                 </div>
+
             </div>
+
 
         </div>
     );

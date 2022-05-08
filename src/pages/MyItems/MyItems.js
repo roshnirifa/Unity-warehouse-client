@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../firebase_init';
 
 const MyItems = () => {
+    const [user] = useAuthState(auth);
+    console.log(
+        user
+    );
     const handleItemsDelete = id => {
         const confirm = window.confirm("Are you sure you want to delete");
         if (confirm) {
@@ -26,11 +32,12 @@ const MyItems = () => {
     }
     const [items, setItems] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/myItems')
+        fetch(`http://localhost:5000/myItems/${user?.email}`)
             .then(response => response.json())
             .then(data => setItems(data))
 
-    }, [])
+    }, [user?.email])
+
     return (
         <div className='container'>
             <h1 className='text-center my-3'> My Items </h1>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Product.css'
 
 const Product = ({ product }) => {
@@ -9,7 +9,6 @@ const Product = ({ product }) => {
         navigate(`/inventory/${_id}`)
     }
     return (
-
 
         <div className='product'>
             <div className='product-img'>
@@ -23,6 +22,8 @@ const Product = ({ product }) => {
             <p><small>{description}</small></p>
             <button onClick={() => handleUpdate(_id)} className='btn btn-primary w-50'> Update</button>
         </div>
+
+
 
     );
 };

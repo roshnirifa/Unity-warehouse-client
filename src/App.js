@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './pages/Home/Header/Header';
 import { Route, Router, Routes } from 'react-router-dom';
 import Home from './pages/Home/Home/Home';
-import Blogs from './pages/Home/Blogs/Blogs';
 import Login from './pages/Home/Login/Login';
 import Footer from './pages/shared/Footer/Footer'
 import Register from './pages/Register/Register';
@@ -16,6 +15,8 @@ import RequriedAuth from './pages/Home/Login/RequiredLogin/RequriedAuth';
 import AddItems from './pages/AddItems/AddItems';
 import ManageItems from './pages/ManageItems/ManageItems';
 import MyItems from './pages/MyItems/MyItems';
+import Contact from './pages/Home/Contact/Contact';
+import Blog from './pages/Home/Blog/Blog';
 
 
 
@@ -38,14 +39,18 @@ function App() {
             <ProductsDetail></ProductsDetail>
           </RequriedAuth>
         }></Route>
-        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+
         <Route path='/addItems' element={<AddItems></AddItems>}></Route>
         <Route path='/manageItems' element={
 
-          <ManageItems></ManageItems>
+          <RequriedAuth>
+            <ManageItems></ManageItems>
+          </RequriedAuth>
 
         }></Route>
         <Route path='/myItems' element={<MyItems></MyItems>}></Route>
+        <Route path='/contact' element={<Contact></Contact>}></Route>
+        <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
