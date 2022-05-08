@@ -19,7 +19,7 @@ const AddItems = () => {
 
 
 
-        const url = 'http://localhost:5000/addItems';
+        const url = 'https://glacial-dawn-25251.herokuapp.com/addItems';
 
         fetch(url, {
             method: 'POST',
@@ -41,8 +41,8 @@ const AddItems = () => {
 
     }
     return (
-        <div className='form mx-auto my-5' >
-            <Form onSubmit={handleAddItems} className='w-75 mx-auto mt-4'>
+        <div className='form mx-auto my-5 mt-5' >
+            <Form onSubmit={handleAddItems} className='w-75 mx-auto mt-4 '>
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                     <Form.Label className='mt-3'>Product Name</Form.Label>
                     <Form.Control type="text" name='productName' placeholder="Product name" />

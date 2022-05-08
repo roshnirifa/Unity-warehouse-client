@@ -12,7 +12,7 @@ const useProduct = () => {
 
 
     useEffect(() => {
-        axios.get('http://localhost:5000/products', {
+        axios.get('https://glacial-dawn-25251.herokuapp.com/products', {
             headers: { Authorization: `Bearer ${user?.accessToken}` }
 
         })

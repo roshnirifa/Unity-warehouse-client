@@ -21,9 +21,11 @@ import Blog from './pages/Home/Blog/Blog';
 
 
 
+
 function App() {
   return (
     <div className="App">
+
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
@@ -59,6 +61,7 @@ function App() {
       <ToastContainer></ToastContainer>
 
     </div >
+
   );
 }
 

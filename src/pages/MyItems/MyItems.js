@@ -15,7 +15,7 @@ const MyItems = () => {
             console.log("deleting seletcd", id);
 
 
-            fetch(`http://localhost:5000/myItems/${id}`, {
+            fetch(`https://glacial-dawn-25251.herokuapp.com/myItems/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -32,14 +32,14 @@ const MyItems = () => {
     }
     const [items, setItems] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/myItems/${user?.email}`)
+        fetch(`https://glacial-dawn-25251.herokuapp.com/myItems/${user?.email}`)
             .then(response => response.json())
             .then(data => setItems(data))
 
     }, [user?.email])
 
     return (
-        <div className='container'>
+        <div className='container mt-5 pt-4'>
             <h1 className='text-center my-3'> My Items </h1>
 
             <div className='table '>

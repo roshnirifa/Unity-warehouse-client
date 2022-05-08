@@ -8,12 +8,12 @@ import './ManageItems.css'
 
 
 const ManageItems = () => {
-    const { products, setRender, setProducts } = useProduct();
+    const { products, setRender } = useProduct();
 
 
     const [restock, setRestock] = useState(null);
     const handleRestock = id => {
-        axios.put(`http://localhost:5000/restockQuantity/${id}`, { quantity: restock })
+        axios.put(`https://glacial-dawn-25251.herokuapp.com/restockQuantity/${id}`, { quantity: restock })
             .then(data => {
                 alert("data updated")
                 setRender(true)
@@ -26,14 +26,14 @@ const ManageItems = () => {
 
     }
     const handleDelete = id => {
-        axios.delete(`http://localhost:5000/manageItems/${id}`)
+        axios.delete(`https://glacial-dawn-25251.herokuapp.com/manageItems/${id}`)
             .then(data => {
                 alert("data deleted")
             })
     }
 
     const handleDelivered = id => {
-        axios.put(`http://localhost:5000/delivered/${id}`)
+        axios.put(`https://glacial-dawn-25251.herokuapp.com/delivered/${id}`)
             .then(data => {
                 alert("product delivered")
                 setRender(true)

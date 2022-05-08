@@ -1,32 +1,46 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import useProduct from '../useProduct/useProduct';
 
 
 const ProductsDetail = () => {
+    const { setRender } = useProduct();
+    const { inventoryId } = useParams();
+    const [data, setdata] = useState({});
     const [restock, setRestock] = useState(null);
     const handleRestock = id => {
-        axios.put(`http://localhost:5000/restockQuantity/${id}`, { quantity: restock })
+        setRender(false)
+        axios.put(`https://glacial-dawn-25251.herokuapp.com/restockQuantity/${id}`, { quantity: restock })
             .then(data => {
+                setRender(true)
+
                 alert("data updated")
 
             })
 
+            .catch(error => {
+                setRender(false)
+            })
+
     }
 
-    const { inventoryId } = useParams();
-    const [data, setdata] = useState({});
-
     const handleDelivered = id => {
-        axios.put(`http://localhost:5000/delivered/${id}`)
+        setRender(false)
+        axios.put(`https://glacial-dawn-25251.herokuapp.com/delivered/${id}`)
             .then(data => {
-                console.log(data.data);
-                alert("delivered")
+                setRender(true)
+
+                alert("delivered");
+
+            })
+            .catch(error => {
+                setRender(false)
             })
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/product/${inventoryId}`)
+        fetch(`https://glacial-dawn-25251.herokuapp.com/product/${inventoryId}`)
             .then(res => res.json())
             .then(data => {
                 setdata(data);
